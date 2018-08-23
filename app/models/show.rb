@@ -6,8 +6,6 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     Show.where("rating=?", params[maximum[:rating]])
-    
-Client.where("orders_count = ?", params[:orders])
   end
 
   def self.lowest_rating
